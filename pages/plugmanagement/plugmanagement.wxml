@@ -1,0 +1,24 @@
+<!-- pages/plugmanagement/plugmanagement.wxml -->
+<view class="container">
+    <view class="plug-list" wx:if="{{plugs}}">
+        <view class="plug-item" wx:for="{{plugs}}" wx:key="index" data-name="{{item.name}}" bind:tap="plugTap">
+            <view class="item-top">
+                <view>
+                    <view class="name">{{item.displayName}}({{item.name}})</view>
+                </view>
+                <view>
+                    <view class="status {{item.IsEnable?'status-select':''}} ">
+                        {{item.IsEnable?'已启用':'未启用'}}
+                    </view>
+                </view>
+            </view>
+            <view class="content">{{item.description}}</view>
+            <view class="words" wx:if="{{item.triggerwords.length != 0}}">
+                <view class="keyWords">关键词:</view>
+                <view class="words-item" wx:for="{{item.triggerwords}}" wx:if="{{index<3}}" wx:for-item="word" wx:key="index">
+                    {{word}}
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

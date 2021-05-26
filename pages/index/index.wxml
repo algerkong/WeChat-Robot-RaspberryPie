@@ -1,0 +1,22 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="pi-list">
+    <view class="pi-item" wx:for="{{piList}}" wx:key="item.deviceId" bindtap="showDetail" data-id="{{item.deviceId}}" data-name="{{item.name}}">
+      <text class="pi-name">{{item.name}}</text>
+      <text class="pi-id">{{item.deviceId}}</text>
+      <image src="../../image/logo.svg" class="logo" />
+    </view>
+  </view>
+</view>
+<view class="no-search" wx:if="{{piList.length == 0}}">
+  <view class="loading">
+    <view class="loading-img">
+      <image class="logo-img" src="../../image/logo.svg"></image>
+    </view>
+    <view class="loading-item"></view>
+    <view class="loading-item"></view>
+    <view class="loading-item"></view>
+  </view>
+  <view class="loading-text">正在发现树莓派</view>
+  <view class="btn-chat" bind:tap="toChat">体验设备</view>
+</view>

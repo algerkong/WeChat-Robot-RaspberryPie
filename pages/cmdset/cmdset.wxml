@@ -1,0 +1,11 @@
+<!-- pages/cmdset/cmdset.wxml -->
+<view class="container">
+    <view class="section">
+        <view class="section-title">Key (default: pisugar)</view>
+        <input class="section-input" bindinput="bindKey" placeholder="服务Key，默认为pisugar" value="{{key}}" />
+    </view>
+    <button wx:for="{{customCommands}}" wx:for-item="item" wx:key="item" class="submit" data-uuid="{{item.uuidLabel}}" bindtap="sendCommand">
+        {{item.label}}
+    </button>
+    <textarea class="response-content" value="{{responseText}}" maxlength="500" disabled="true"></textarea>
+</view>

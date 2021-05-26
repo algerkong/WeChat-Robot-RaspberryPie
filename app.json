@@ -1,0 +1,29 @@
+{
+  "pages": [
+  
+    "pages/index/index",
+    "pages/message/message",
+    "pages/chat/chat",
+    "pages/plugitemset/plugitemset",
+    "pages/set/set",
+    "pages/plugmanagement/plugmanagement",
+    "pages/detail/detail",
+    "pages/install/install",
+    "pages/cmdset/cmdset",
+    "pages/plugadd/plugadd"
+  ],
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.4",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "发现树莓派",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json"
+}

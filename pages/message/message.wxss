@@ -1,0 +1,116 @@
+/* pages/message/message.wxss */ /* pages/chat/chat.wxss */
+.main {
+  background-color: #ededed;
+  min-height: 100vh;
+  padding: 20rpx;
+  box-sizing: border-box;
+  padding-bottom: 100rpx;
+}
+
+.time {
+  text-align: center;
+  margin-bottom: 30rpx;
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.send-msg-page {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #f7f7f7;
+}
+
+.input-msg {
+  display: flex;
+  box-sizing: border-box;
+  padding: 15rpx 20rpx;
+  background-color: #f7f7f7;
+}
+
+.input-msg > .textarea {
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  flex: 1;
+  padding: 10rpx 20rpx;
+  font-size: 28rpx;
+  max-height: 3rem;
+  border-top: solid #f4f4f4 0.01rpx;
+  margin: 0 20rpx;
+}
+
+.input-msg > .btn-send {
+  height: 60rpx;
+  line-height: 35rpx;
+  padding: 10rpx 30rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  background-color: #6898f1;
+  border-radius: 10rpx;
+  color: #ffffff;
+  align-self: flex-end;
+}
+
+.btn-record image {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+}
+
+.btn-record {
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 5rpx;
+  border-radius: 50%;
+  border: 3rpx solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.btn-start-record {
+  width: 180rpx;
+  height: 180rpx;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 5rpx 5rpx 10rpx #83838334;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.btn-start-record image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.start-record {
+  background-color: #6898f1;
+  box-shadow: 0rpx 0rpx 30rpx #8383835e;
+}
+
+.record-text {
+  font-size: 24rpx;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  top: 70rpx;
+  left: 0;
+}
+
+.btn-send:active {
+  filter: brightness(85%);
+}
+
+.record-page {
+  position: relative;
+  height: 500rpx;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

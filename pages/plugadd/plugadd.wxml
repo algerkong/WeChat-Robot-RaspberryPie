@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="plug-list" wx:if="{{plugs}}">
+        <view class="plug-item" wx:for="{{plugs}}" wx:key="index" bind:tap="plugTap" data-name="{{item.name}}">
+            <view class="item-top">
+                <view>
+                    <view class="name">{{item.displayname}}({{item.name}})</view>
+                </view>
+                <view>
+                    <view class="status {{item.state=='已安装'?'':item.state == '一键升级'?'status-upgrade':'status-select'}}" data-state="{{item.state}}" data-name="{{item.name}}" bind:tap="stateTap">
+                        {{item.state}}
+                    </view>
+                </view>
+            </view>
+            <view class="content">{{item.description}}</view>
+        </view>
+    </view>
+</view>

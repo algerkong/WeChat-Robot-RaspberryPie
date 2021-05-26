@@ -1,0 +1,19 @@
+<view class="music-item" wx:if="{{musiclist.length>0}}">
+  <image src="{{image}}" class="image" />
+  <view class="content">
+    <view>
+      <swiper class="" indicator-dots="{{musiclist.length>showNum?true:false}}" indicator-color="rgba(0,0,0,.2)" autoplay="{{false}}" style="height:{{musiclist.length<=showNum?(musiclist.length*100)+40:(showNum)*100+80}}rpx;">
+        <swiper-item class="list-item" wx:for="{{musiclist.length/showNum}}" wx:for-index="listIndex" wx:key="listIndex">
+          <view class="item" wx:for="{{musiclist}}" wx:key="index" wx:if="{{index<(showNum*(listIndex+1))&& index>=(listIndex*showNum)}}">
+            <image class="img" src="{{item.album_pic_url}}" />
+            <view class="text">
+              <view class="name  over-text">{{item.name}}</view>
+              <view class="author  over-text">{{item.author}}</view>
+            </view>
+            <image class="isPlay" bind:tap="playMusic" data-url="{{item.url}}" data-index="{{index}}" src="{{index!=playIndex?'../../image/play.svg':'../../image/pause.svg'}}" />
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

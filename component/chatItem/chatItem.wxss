@@ -1,0 +1,68 @@
+/* component/chatItem/chatItem.wxss */
+
+.chat-item{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30rpx;
+    color: #333333;
+}
+.image{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 10rpx;
+    flex-shrink: 0;
+    box-shadow: 5rpx 5rpx 5rpx #68686833;
+}
+
+.content{
+    background-color: #ffffff;
+    max-width: 500rpx;
+    border-radius: 10rpx;
+    margin: 0 30rpx;
+    position: relative;
+}
+
+.content .text{
+    padding: 10rpx 20rpx;
+    min-height: 70rpx;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: normal;
+    word-break: break-all;
+    display: flex;
+    align-items: center;
+}
+
+.chat-item .content::before{
+    content: "";
+    position: absolute;
+    border: 20rpx solid transparent;
+    left: -30rpx;
+    width: 0;
+    height: 0;
+    border-right-color: #ffffff;
+    top: 15rpx;
+}
+
+.chat-r{
+    flex-direction: row-reverse;
+    color: #ffffff;
+}
+
+.chat-r .content{
+    background-color: #6898f1;
+}
+
+.chat-r .content::before{
+    content: "";
+    position: absolute;
+    border: 20rpx solid transparent;
+    right: -30rpx;
+    left: auto;
+    width: 0;
+    height: 0;
+    border-left-color: #6898f1;
+    top: 15rpx;
+}

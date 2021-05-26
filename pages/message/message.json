@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "msg-list": "../../component/msglist/msglist",
+    "chat-item": "../../component/chatItem/chatItem",
+    "music-item": "../../component/musicitem/musicitem",
+    "news-item": "../../component/newsitem/newsitem"
+  },
+  "navigationBarTitleText": "聊天机器人",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#3b3a3f",
+  "navigationBarTextStyle": "white"
+}

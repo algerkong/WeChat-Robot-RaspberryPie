@@ -1,0 +1,8 @@
+<!-- component/recorditem/recorditem.wxml -->
+<view class="chat-item chat-r">
+    <image src="{{image}}" class="image" />
+    <view class="content" bind:tap="playMusic">
+        <rich-text class="text" nodes="{{content}}"></rich-text>
+    </view>
+    <image class="isPlay" bind:tap="playMusic" src="{{!isPlay?'../../image/play.svg':'../../image/pause.svg'}}" />
+</view>

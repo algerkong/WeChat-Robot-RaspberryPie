@@ -1,0 +1,7 @@
+<!-- component/chatItem/chatItem.wxml -->
+<view class="chat-item {{is?'chat-r':''}}">
+    <image src="{{image}}" class="image" />
+    <view class="content">
+        <rich-text class="text" nodes="{{content}}"></rich-text>
+    </view>
+</view>

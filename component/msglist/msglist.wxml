@@ -1,0 +1,7 @@
+<view wx:for="{{msglist}}" wx:key="index">
+    <view class="time" wx:if="{{index%30==0}}">{{item.post_time}}</view>
+    <chat-item wx:if="{{item.type=='msg'}}" content="{{item.content}}" is="{{item.is}}" image="{{item.image}}" />
+    <record-item wx:if="{{item.type=='record'}}" content="{{item.content}}" image="{{item.image}}" recordfile="{{item.recordfile}}" />
+    <music-item wx:if="{{item.type=='music'}}" musiclist="{{item.musicList}}" />
+    <news-item wx:if="{{item.type=='news'}}" newslist="{{item.newsList}}" />
+</view>

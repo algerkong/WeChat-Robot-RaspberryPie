@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "发现树莓派",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#6898f1",
+  "navigationBarTextStyle": "white"
+}

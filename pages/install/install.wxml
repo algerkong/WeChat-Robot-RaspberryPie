@@ -1,0 +1,11 @@
+<!--pages/install/install.wxml-->
+<view class="container">
+  <view class="logo">
+    <image class="logo-img" src="../../image/logo.svg"></image>
+  </view>
+  <view>
+    <text class="title">sugar-wifi-conf 简易安装步骤</text>
+    <textarea class="content" value="{{manual}}" maxlength="500" disabled="true" ></textarea>
+    <button bindtap='copyText'>复制代码</button>
+  </view>
+</view>

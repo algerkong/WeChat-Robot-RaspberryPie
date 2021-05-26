@@ -1,0 +1,11 @@
+<!-- pages/chat/chat.wxml -->
+<view class="main" id="scrollpage">
+    <view class="time">{{time}}</view>
+    <view class="chat-list" style="padding-bottom:{{inputBottom + 50}}px;">
+        <chat-item wx:for="{{msgList}}" wx:key="index" content="{{item.content}}" is="{{item.is}}" image="{{item.image}}" />
+    </view>
+</view>
+<view class="input-msg" style="bottom:{{inputBottom}}px;">
+    <textarea type="text" fixed="{{true}}" confirm-type="{{'发送'}}" auto-height="{{true}}" adjust-position="{{false}}" value="{{msg}}" bindinput="bindMsg" show-confirm-bar="{{false}}" bindfocus="focusTextarea" bindblur="blurTextarea" />
+    <view class="btn-send" bind:tap="sendMsg">发送</view>
+</view>

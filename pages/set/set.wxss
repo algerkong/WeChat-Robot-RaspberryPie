@@ -1,0 +1,48 @@
+/* pages/set/set.wxss */
+
+.container{
+    padding: 30rpx;
+}
+
+.item{
+    padding: 0 30rpx;
+    border-radius: 20rpx;
+    margin-bottom: 36rpx;
+    font-size: 40rpx;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow:  5rpx 5rpx 15rpx #cacaca,
+             -5rpx -5rpx 15rpx #ebebeb;
+    height: 180rpx;
+    transition: .2s;
+}
+
+.item:active{
+    filter: brightness(90%);
+    box-shadow:  8rpx 8rpx 20rpx #cacaca,
+             -8rpx -8rpx 20rpx #ebebeb;
+    transform: scale(0.99);
+}
+
+.iconfont{
+    font-size: 60rpx;
+}
+
+.set-name{
+    margin-left: 20rpx;
+}
+
+
+
+
+.back{
+    position: absolute;
+    right:0;
+    top: 0;
+    opacity: .5;
+    font-size: 200rpx;
+    transform: rotate(45deg);
+}

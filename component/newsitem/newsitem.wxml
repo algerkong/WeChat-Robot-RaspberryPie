@@ -1,0 +1,20 @@
+<view class="news-item" wx:if="{{newslist.length>0}}">
+    <image src="{{image}}" class="image" />
+    <view class="content">
+        <swiper class="" indicator-dots="{{newslist.length>0}}" indicator-color="rgba(0,0,0,.2)" autoplay="{{false}}">
+            <swiper-item class="list-item" wx:for="{{newslist}}" wx:key="listIndex" wx:if="{{item.title}}">
+                <view class="item" bindload="getItemWidth">
+                    <image class="img" src="{{item.shortcut}}" mode="widthFix" />
+                    <view class="text">
+                        <view class="title">
+                            {{item.title}}
+                            <span>{{item.cate1}}</span>
+                        </view>
+                        <view class="author">{{item.srcfrom}}</view>
+                        <view class="abs">{{item.abs_m}}</view>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

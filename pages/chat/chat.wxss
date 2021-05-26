@@ -1,0 +1,53 @@
+/* pages/chat/chat.wxss */
+.main{
+    background-color: #ededed;
+    min-height: 100vh;
+    padding: 20rpx;
+    box-sizing: border-box;
+    padding-bottom: 100rpx;
+}
+
+.time{
+    text-align: center;
+    margin-bottom: 30rpx;
+    font-size: 24rpx;
+    color: #666666;
+}
+
+.input-msg{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 15rpx 20rpx;
+    background-color: #f7f7f7;
+}
+
+.input-msg>textarea{
+    background-color: #ffffff;
+    border-radius: 10rpx;
+    flex: 1;
+    padding: 10rpx 20rpx;
+    font-size: 28rpx;
+    max-height: 3rem;
+    border-top: solid #f4f4f4 0.01rpx;
+}
+
+.input-msg>.btn-send{
+    height: 60rpx;
+    line-height: 35rpx;
+    padding: 10rpx 30rpx;
+    box-sizing: border-box;
+    font-size: 28rpx;
+    background-color: #6898f1;
+    border-radius: 10rpx;
+    color: #ffffff;
+    margin-left: 20rpx;
+    align-self: flex-end;
+}
+
+.btn-send:active{
+    filter: brightness(85%);
+}

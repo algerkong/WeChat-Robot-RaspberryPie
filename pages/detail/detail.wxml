@@ -1,0 +1,46 @@
+<!-- pages/detail/detail.wxml -->
+<view class="container">
+  <view class="info-wrap">
+    <view class="device-header">
+      <input class="name" wx:if="{{nameMode}}" focus="nameMode" bindblur="changeDeviceName" placeholder="备注名称" value="{{deviceName}}" />
+      <view>
+        <text class="name">{{deviceModel}}</text>
+      </view>
+    </view>
+    <view class="row">
+      <view class="info-item">
+        <text class="info-label">当前连接Wifi</text>
+        <text class="info-content">{{wifiName}}</text>
+      </view>
+      <view class="info-item">
+        <text class="info-label">Ip地址</text>
+        <text class="info-content">{{ipAddress}}</text>
+      </view>
+    </view>
+    <view class="row">
+      <view class="info-item" wx:for="{{customInfo}}" wx:for-item="item" wx:key="item">
+        <text class="info-label">{{item.label}}</text>
+        <text class="info-content">{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="tabs">
+    <view class="tab-item" bindtap='bindSelectWifiTab'>
+      <text class="title bold">WIFI设置</text>
+      <view class="select-pad"></view>
+    </view>
+  </view>
+  <view class="setting">
+    <view class="section">
+      <input class="section-input" bindinput="bindSsid" placeholder="WIFI名称" value="{{ssid}}" />
+      <view class="wifiBtn" bindtap="getWifi">获取手机WIFI</view>
+    </view>
+    <view class="section">
+      <input class="section-input" bindinput="bindPass" placeholder="WIFI密码" />
+    </view>
+    <button class="submit" bindtap="setWifi">连接</button>
+    <button class="submit btn-set" style="margin-top: 200rpx;" wx:if="{{wifiName!=''&&wifiName!='...'&&ipAddress!=''&&ipAddress!='...'}}" bindtap="setPlug">
+      系统设置
+    </button>
+  </view>
+</view>

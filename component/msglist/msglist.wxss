@@ -1,0 +1,8 @@
+/* component/msglist/msglist.wxss */
+
+.time {
+  text-align: center;
+  margin-bottom: 30rpx;
+  font-size: 24rpx;
+  color: #666666;
+}

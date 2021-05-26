@@ -1,0 +1,88 @@
+/* component/chatItem/chatItem.wxss */
+
+.music-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30rpx;
+  color: #333333;
+}
+.image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 10rpx;
+  flex-shrink: 0;
+  box-shadow: 5rpx 5rpx 5rpx #68686833;
+}
+
+.content {
+  background-color: #ffffff;
+  width: 500rpx;
+  border-radius: 10rpx;
+  margin: 0 30rpx;
+  position: relative;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  border: 20rpx solid transparent;
+  left: -30rpx;
+  width: 0;
+  height: 0;
+  border-right-color: #ffffff;
+  top: 15rpx;
+}
+
+.content .list-item {
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.content .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eeeeee;
+}
+
+.content .item:last-child {
+  border: none;
+}
+
+.over-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item .img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  box-shadow: 5rpx 5rpx 5rpx #eeeeee;
+}
+
+.item .text {
+  flex: 6;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.item .text .name {
+  font-size: 30rpx;
+}
+.item .text .author {
+  font-size: 25rpx;
+  color: #555555;
+}
+
+.item .isPlay {
+  flex: 1;
+}
+.isPlay {
+  width: 50rpx;
+  height: 50rpx;
+}

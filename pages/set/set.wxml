@@ -1,0 +1,40 @@
+<!-- pages/set/set.wxml -->
+<view class="container">
+    <view class="list">
+        <navigator hover-class="none" url="/pages/plugmanagement/plugmanagement?url={{url}}">
+            <view class="item" style="background:#2f4858;">
+                <i class="iconfont  icon-quanlingyuguimo"></i>
+                <view class="set-name">插件管理</view>
+                <i class="iconfont  icon-quanlingyuguimo back"></i>
+            </view>
+        </navigator>
+        <navigator hover-class="none" url="/pages/plugadd/plugadd?url={{url}}">
+            <view class="item" style="background:#33658a;">
+                <i class="iconfont    icon-linghuokuozhan"></i>
+                <view class="set-name">插件宝库</view>
+                <i class="iconfont    icon-linghuokuozhan  back"></i>
+            </view>
+        </navigator>
+        <navigator hover-class="none" url="/pages/plugadd/plugadd?url={{url}}">
+            <view class="item" style="background:#86bbd8;">
+                <i class="iconfont    icon-guanli"></i>
+                <view class="set-name">系统配置</view>
+                <i class="iconfont    icon-guanli  back"></i>
+            </view>
+        </navigator>
+        <navigator hover-class="none" url="/pages/plugadd/plugadd?url={{url}}">
+            <view class="item" style="background:#e09f3e;">
+                <i class="iconfont    icon-xingnengjisuan"></i>
+                <view class="set-name">系统升级</view>
+                <i class="iconfont    icon-xingnengjisuan  back"></i>
+            </view>
+        </navigator>
+        <navigator hover-class="none" url="/pages/cmdset/cmdset?url={{url}}&deviceId={{deviceId}}&deviceName={{deviceName}}">
+            <view class="item" style="background:#52796f;">
+                <i class="iconfont  icon-jishufuwu"></i>
+                <view class="set-name">命令管理</view>
+                <i class="iconfont  icon-jishufuwu  back"></i>
+            </view>
+        </navigator>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "chat-item": "../chatItem/chatItem",
+    "music-item": "../musicitem/musicitem",
+    "news-item": "../newsitem/newsitem",
+    "record-item": "../recorditem/recorditem"
+  }
+}

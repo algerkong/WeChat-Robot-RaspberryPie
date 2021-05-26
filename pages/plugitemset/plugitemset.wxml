@@ -1,0 +1,57 @@
+<!-- pages/plugitemset/plugitemset.wxml -->
+<view class="container" wx:if="{{plug}}">
+    <view class="row">
+                 <view class="name">{{plug.name}}</view>
+    </view>
+    <view class="row">
+        <view class="row-text">中文简称:</view>
+        <input class="text" value="{{plug.displayName}}" bindinput="changeDisplayName" />
+    </view>
+    <view class="row">
+        <view class="row-text">简介:</view>
+        <view class="text-msg">
+            <textarea  value="{{plug.description}}" bindinput="changeDescription" />
+        </view>
+    </view>
+
+    <view class="row">
+        <view class="row-text">语音触发词:</view>
+        <view class="words">
+            <view class="words-item" wx:for="{{plug.triggerwords}}" wx:for-item="word" wx:key="index">
+                <view>{{word}}</view>
+                <icon class="icon-small" type="cancel" size="20" bind:tap="deleteWord" data-index="{{index}}"></icon>
+            </view>
+
+            <view class="words-item" bind:tap="showInput">
+                + 添加触发词
+            </view>
+        </view>
+    </view>
+
+
+    <view class="btnview">
+        <view  class="row">
+            <view >系统插件</view>
+            <switch checked="{{plug.IsSystem}}" bindchange="switchSystem" />
+        </view >
+        <view  class="row">
+            <view >自动启动</view>
+            <switch checked="{{plug.AutoLoader}}" bindchange="switchAuto" />
+        </view>
+        <view  class="row">
+            <view >插件状态</view>
+            <switch checked="{{plug.IsEnable}}" bindchange="switchEnable" />
+        </view>
+    </view>
+
+    <button class="submit" bindtap="submitTap">保存</button>
+
+    <button class="submit submitDelete" bindtap="deletePlug">删除插件</button>
+
+    <view class="input-page" wx:if="{{isAddWord}}">
+            <input class="text" focus="{{isAddWord}}" placeholder="输入唤醒词..." bindinput="inputWord" />
+        <button class="submit" bind:tap="addWord">
+            添加
+        </button>
+    </view>
+</view>

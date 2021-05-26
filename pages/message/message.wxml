@@ -1,0 +1,21 @@
+<!-- pages/chat/chat.wxml -->
+<view class="main" id="scrollpage" bind:tap="tapMain">
+    <view class="chat-list" style="padding-bottom:{{isRecord?'330':inputBottom + 50}}px;">
+        <msg-list msglist="{{msgList}}" />
+    </view>
+</view>
+<view class="send-msg-page" style="bottom:{{inputBottom}}px;">
+    <view class="input-msg">
+        <view class="btn-record" bind:tap="showRecord">
+            <image src="../../image/{{!isRecord?'voiceprint.svg':'keyboard.svg'}}" />
+        </view>
+        <textarea class="textarea" type="text" fixed="{{true}}" confirm-type="{{'发送'}}" auto-height="{{true}}" adjust-position="{{false}}" value="{{msg}}" bindinput="bindMsg" show-confirm-bar="{{false}}" bindfocus="focusTextarea" bindblur="blurTextarea" />
+        <view class="btn-send" bind:tap="sendMsg">发送</view>
+    </view>
+    <view class="record-page " wx:if="{{isRecord}}">
+        <view class="record-text">{{recordText}}</view>
+        <view class="btn-start-record {{isRecordStart?'start-record':''}}" bind:longtap="startRecord" bind:touchend="endRecord">
+            <image src="../../image/{{isRecordStart?'record1.svg':'record0.svg'}}" />
+        </view>
+    </view>
+</view>

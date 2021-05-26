@@ -1,0 +1,86 @@
+/* pages/plugmanagement/plugmanagement.wxss */
+.container{
+  padding: 30rpx;
+}
+.plug-item{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20rpx;
+  background-color: #edeef3;
+  border-radius: 20rpx;
+  box-shadow: 0 2px 15px 5px rgba(211, 211, 211, 0.2);
+  margin-bottom: 30rpx;
+  transition: all 0.1s ease-out;
+  position: relative;
+}
+
+.plug-item:active{
+  background-color: #ebebeb;
+  box-shadow: 0 0px 5px 3px rgba(224, 224, 224, 0.2);
+  transform: scale(0.99)
+}
+
+.plug-item >.item-top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-top>view:first-child{
+  flex: 3;
+}
+
+.item-top>view:last-child{
+  flex: 1;
+}
+
+
+.plug-item>.item-top .name{
+  font-size: large;
+  font-weight: bold;
+}
+
+.plug-item>.item-top .status{
+  display: inline-block;
+  padding: 5rpx 20rpx;
+  background-color: #d8dbe7;
+  color: #ffffff;
+  float: right;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+}
+
+
+.plug-item>.item-top .status-select{
+    background-color: #33658a;
+}
+
+
+
+.plug-item>.content{
+  font-size: small;
+  margin-top: 10rpx;
+  color: #575555;
+}
+
+
+.plug-item>.words{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+}
+
+
+
+.plug-item>.words>.keyWords{
+  margin-right: 10rpx;
+}
+.plug-item>.words>.words-item{
+  overflow: hidden;
+  padding:0 15rpx;
+  background-color: #9dd4c7;
+  border-radius: 30rpx;
+  color: #ffffff;
+  margin-right: 10rpx;
+  margin-top: 8rpx;
+  font-size: 20rpx;
+}

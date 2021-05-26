@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "chat-item": "../../component/chatItem/chatItem"
+  },
+  "navigationBarTitleText": "聊天机器人",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#3b3a3f",
+  "navigationBarTextStyle": "white"
+}
